@@ -1,0 +1,320 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14-sep-2017, 23:28:10
+    Author     : Angel
+*/
+
+*{
+margin: 0;
+padding: 0;
+}
+body.my_body {
+    font-size: 0.9em;
+    font-family: verdana, arial, sans-serif;
+    background-image:url("../images/periodico.jpg");
+    background-color: #cccccc;
+}
+
+button.mi_boton {
+    position: relative;
+    left:-150px;
+    width: 90px;
+    margin-top: 8px;
+}
+
+canvas {
+    position: relative;
+    top:50px;
+    background-color: #fffff0;
+    padding-bottom:10px;
+    display:block;
+}
+
+#sudoku {
+    margin-left:auto;
+    margin-right:auto;
+    width: 945px;
+    height:900px;
+    background-color:whitesmoke; 
+    padding:10px;
+}
+
+#banner {
+    position: relative;
+    left: 0px;
+    top:0px;
+    padding: 10px;
+    font-family: 'Francois One', sans-serif;
+}
+
+
+
+#help {
+    top:60px;
+    font-size: 10px;
+    width: 220px;
+    float: right;
+}
+
+#main {
+    position:relative;
+    left:20%;
+    top:0%;
+    padding: 10px;
+    float:left;
+}
+
+.check{
+    position: relative;
+    left:-175px;
+    top:-30px;
+    font-size: 14px;
+}
+
+.mostrar{
+    position: relative;
+    left:-150px;
+    font-size: 12px;
+}
+
+.big {
+    position:relative;
+    left:-600px;
+    font-size: 50px;
+    color:#ffffff;
+}
+
+#small {
+    display:block;
+    font-size: 10px;
+}
+
+#help li{
+    padding-bottom: 6px;
+}
+
+h2 {
+    color: #444444;
+    text-align:center;
+}
+
+td.help li {
+    padding-bottom: 6px;
+    font-size: 0.7em;
+}
+
+
+#contenedor{
+    margin: 10px auto;
+    width: 540px;
+    height: 115px;
+}
+.reloj{
+    position:relative;
+    top:-1000px;
+    left:-180px;
+    float: left;
+    font-size: 25px;
+    font-family: Courier,sans-serif;
+    color: #fff;
+    z-index: 2;
+}
+.boton{
+    position: relative;
+    outline: none;
+    border: 1px solid #363431;
+    top:-350px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-shadow: 0px -1px 1px black;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: Helvetica;
+    cursor: pointer;
+    background-image: linear-gradient(#3aad02,#2c6f05);
+}
+.boton:active{
+    background-image: linear-gradient(#2c6f05,#3aad02);
+}
+.boton:hover{
+    box-shadow: 0px 0px 14px #3aad02;
+}
+
+
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(119, 119, 119, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 14px;
+    background: #00CC66;
+    border-width: 1px;
+    border-radius: 4px;
+    z-index: 1;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(119, 119, 119, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(85, 85, 85, 1);
+    background-color: rgba(231, 231, 231, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #888;
+}
+
+.campoUsuario{
+    position: relative;
+    top:-8px;
+    left:-250px;
+    z-index: 2;
+}
+
+.usuario{
+    color:white;
+    position:relative;
+    left:-325px;
+    top:25px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.campoContra{
+    position: relative;
+    top:-8px;
+    left:-110px;
+    z-index: 2;
+}
+
+.contrasena{
+    color: white;
+    position:relative;
+    left:-220px;
+    top:25px;
+    font-weight: bold;
+    font-size: 16px;
+    
+}
+
+.btnCargar{
+    position: relative;
+    left:-70px;
+    top:20px;
+}
+
+.btnGuardar{
+    position:relative;
+    top:20px;
+    left:-50px;
+}
+
+
+.cuadro{
+    position: relative;
+    border-radius: 128px 87px 121px 87px;
+    -moz-border-radius: 128px 87px 121px 87px;
+    -webkit-border-radius: 128px 87px 121px 87px;
+    border: 2px solid #000000;
+    width:35%;
+    height: 25%;
+    left:-195px;
+    top:-1000px;
+    background-color: #00CC66;
+    z-index: 1;
+}
+
+footer{
+    position: relative;
+    top:160px;
+    left:-215px;
+    border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border: 0px solid #000000;
+    width: 150%;
+    height:20%;
+    background: #63BA47;
+    color:white;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+
+#letrasFooter{
+    position:relative;
+    top:10px;
+    font-family: 'Francois One', sans-serif;
+}
+
+.textoCuadro{
+    position:relative;
+    font-size: 14px;
+    color:white;
+    text-align: center;
+}
+
+.combo{
+    position:relative;
+    top:-650px;
+    left:80px;
+    font-size: 14px;
+}
+
+.letrascombo{
+    position: relative;
+    top:-620px;
+    left:0px;
+    font-size: 14px;
+}
+
+.letrasNumero{
+    position:relative;
+    top:-620px;
+    left:0px;
+    font-size: 14px;
+}
+
+div.modo{
+    position: relative;
+    top:-700px;
+    left:800px;
+    width: 100px;
+}
+
+select.combo2{
+    font-size: 14px;
+    position:relative;
+    left:20px;
+}
+
+p.letrascombo2{
+    position:relative;
+    top:30px;
+    left:-35px;
+    font-size: 14px;
+}

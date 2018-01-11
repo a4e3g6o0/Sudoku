@@ -1,0 +1,23 @@
+{
+  "name": "SUDOKU",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "1_iniciar_mongo": "mongod",
+    "2_iniciar_server": "node server.js",
+    "3_abrir_chrome": "start chrome http://localhost:8081/static/html/sudoku.html"
+  },
+  "authors": "Alejandro Calderon Acuña, Linsey Garro Le Roy, Angel Gomez Oviedo",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.0.0",
+    "express-favicon": "^2.0.0",
+    "mongoose": "^4.0.0",
+    "morgan": "^1.0.0"
+  }
+}

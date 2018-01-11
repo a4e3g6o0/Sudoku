@@ -1,0 +1,108 @@
+<!-- 
+Autores: 
+    Alejandro Calderon
+    Linsey Garro
+    Angel Gomez
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sudoku</title>
+        <link rel="icon" href="../images/sudoku.png" type="image/png">
+        <link href="../stylesheets/sudoku.css" rel="stylesheet" type="text/css"/>
+        <script src="../javascripts/valoresPermitidos.js" type="text/javascript"></script>
+        <script src="../javascripts/celda.js" type="text/javascript"></script>
+        <script src="../javascripts/tablero.js" type="text/javascript"></script>
+        <script src="../javascripts/posicion.js" type="text/javascript"></script>
+        <script src="../javascripts/init.js" type="text/javascript"></script>
+        <script src="../javascripts/jquery.min.js" type="text/javascript"></script>
+        <script src="../javascripts/cronometro.js" type="text/javascript"></script>
+        <script src="../javascripts/usuario.js" type="text/javascript"></script>
+        <script src="../javascripts/juego.js" type="text/javascript"></script>
+        <script src="../javascripts/sudoku.js" type="text/javascript"></script>
+        <script src="../javascripts/localStorage.js" type="text/javascript"></script>
+        <link href="../stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
+    </head>
+    <body class="my_body">
+
+
+        <div id="custom-bootstrap-menu" class="navbar-default navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="big">¡Sudoku!</li>
+                    <li> <p class="usuario">Usuario:</p> <input type="text" id="campoUsuario" class="campoUsuario" placeholder="Usuario">
+                    </li>
+                    <li><p class="contrasena">Contraseña:</p> <input type="password" id="campoContrasena" class="campoContra" placeholder="Contraseña">
+                    </li>
+                    <li><button type="button" class="btn btn-success btnCargar" id="btnCargar">Cargar</button>
+                    </li>
+                    <li><button type="button" class="btn btn-success btnGuardar" id="btnGuardar">Guardar</button>
+                    </li>
+                </ul>
+        </div>
+
+        <div id='sudoku'>
+            <div id='banner'>
+            </div>
+
+            <div id='main'>
+                <table>
+                    <tr>
+                        <td>
+                            <canvas id='canvas2' width='541' height='55' title="Click aquí para digitar un número">Canvas is not supported by this browser.</canvas>
+                            <canvas id='canvas1' width='541' height='541'>Canvas is not supported by this browser.</canvas>
+                            <input id='tbSerial' style='width: 538px; background-color: #000000; margin-top: 10px;'/>
+                            <br/><br/>
+                            <span id="extraInfo" style='font-size:0.7em; color: #696969;'></span><br/>
+                        </td>
+                        <td style="width: 135px">
+                            <!--<button type="button" onclick="clearGame()" class="btn btn-success mi_boton" title='Limpia todas las celdas.' >Limpiar</button><br/>-->
+                            <button type="button" id="empezar" onclick="inicio()" class="btn btn-success mi_boton" title='Carga los dígitos de la caja de texto abajo'>Empezar</button><br/>
+                            <button  type="button" id="btnReset" onclick="reset()" class="btn btn-success mi_boton" title='Limpiar todas las celdas ingresadas'>Reiniciar</button><br/>
+                            <button  type="button" id="btnAccept" onclick="acceptPossibles()" class="btn btn-success mi_boton" title='Aceptar la posible solución' >Aceptar</button><br/>
+                            <button  type="button" id="btnHint" onclick="hint()" class="btn btn-success mi_boton" title='Pone la respuesta correcta en la casilla' >Insinuar</button><br/>
+                            <button  type="button" id="btnUndo" onclick="undo()" class="btn btn-success mi_boton" title='Deshace la última acción del usuario, excepto las acciones de los botones'>Deshacer</button><br/>
+                            <button  type="button" id="btnSolve" onclick="solve()" class="btn btn-success mi_boton" title='Si es posible, resuelve el problema' >Resolver</button><br/><br/>
+                            <p class="mostrar">Mostrar permitidos</p> <input id='chbAllowed' type="checkbox" class="check" title='Clickea para esconder los valores permitidos'/><br/><br>
+                            <p class="mostrar">Mostrar los únicos</p> <input id='chbShowSingles' type="checkbox" class="check" /><br/>
+                            <span id="message" style="width: 130; color: Red; "></span><br/> 
+
+                        </td>
+                    </tr>
+                </table>
+                <script src="../javascripts/control.js" type="text/javascript"></script>
+            </div>
+
+            <p class="letrascombo">Dificultad:</p> <select id="dificultad" class="combo">
+                <option value="F">Fácil</option>
+                <option value="N">Normal</option>
+                <option value="D">Difícil</option>
+            </select>
+            
+            <div class="modo">
+                <p class="letrascombo2">Modo:</p> <select id="modo" class="combo2">
+                    <option value="0">Servidor</option>
+                    <option value="1">Cliente</option>
+                </select>
+            </div>
+          
+            <p id="numeroSudoku" class="letrasNumero"></p>
+            <footer><div id=letrasFooter>Curso Paradigmas de Programación
+                <br>Profesor: Carlos Loría Sáenz
+                <br>Estudiantes:
+                <br>Alejandro Calderon Acuña
+                <br>Linsey Garro Le Roy
+                <br>Angel Gomez Oviedo</div></footer>
+
+            <div id="contenedor">
+                <div class="reloj" id="Horas">00</div>
+                <div class="reloj" id="Minutos">:00</div>
+                <div class="reloj" id="Segundos">:00</div>
+                <div class="reloj" id="Centesimas">:00</div>
+                <div class="cuadro"></div>
+            </div>
+        </div>
+    </body>
+</html>
